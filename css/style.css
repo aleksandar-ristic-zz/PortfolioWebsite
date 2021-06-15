@@ -1,8 +1,9 @@
 /* *** Table of Contents ***
 * 1.  Global Styles
-* 2. Header
-* 3. Navigation
-* 4. Home Section
+* 2.  Animations
+* 3.  Header
+* 4.  Navigation
+* 5.  Home Section
 * *** *** *** *** *** *** */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400;1,500;1,600&display=swap');
@@ -142,9 +143,55 @@ img {
 .section.hide {
 	display: none;
 }
+/* *** *** *** *** = = = = = = *** *** *** *** */
+/* *** *** *** 2. Animations *** *** *** */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes topBounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(15px);
+	}
+}
+@keyframes leftBounce {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(15px);
+	}
+}
+@keyframes fadeInTop {
+	0% {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 /* *** *** *** *** = = = = = = *** *** *** *** */
-/* *** *** *** 2. Header *** *** *** */
+/* *** *** *** 3. Header *** *** *** */
 .header {
 	padding: 1.25rem 1rem;
 	position: absolute;
@@ -202,7 +249,7 @@ img {
 }
 
 /* *** *** *** *** = = = = = = *** *** *** *** */
-/* *** *** *** 3. Navigation *** *** *** */
+/* *** *** *** 4. Navigation *** *** *** */
 .nav-menu {
 	position: fixed;
 	padding: 0 1rem;
@@ -230,14 +277,6 @@ img {
 	visibility: visible;
 	z-index: 1000;
 	animation: fadeOut 0.3s ease-out;
-}
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
 }
 .nav-menu.open {
 	visibility: visible;
