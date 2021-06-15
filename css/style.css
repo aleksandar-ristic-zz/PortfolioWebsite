@@ -7,6 +7,9 @@
 * 6.  About Section
 * 7.  Service Section
 * 8.  Portfolio Section
+* 9.  Portfolio Popup
+* 10. Testimonial Section
+* 11. Contact Section
 * *** *** *** *** *** *** */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400;1,500;1,600&display=swap');
@@ -1101,4 +1104,93 @@ img {
 .testimonial-section .testim-slider-nav span i {
 	line-height: 2.5rem;
 	font-size: 1.25rem;
+}
+
+/* *** *** *** *** = = = = = = *** *** *** *** */
+/* *** *** *** 11. Contact Section *** *** *** */
+.contact-section {
+	min-height: 100vh;
+	padding: 5rem 0 5rem;
+}
+.contact-section .contact-item {
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	padding: 0 1rem;
+	display: flex;
+}
+.contact-section .contact-item-inner {
+	width: 100%;
+	padding: 1.875rem 1rem;
+	text-align: center;
+	border-radius: 0.3125rem;
+}
+.contact-section .contact-item-inner i {
+	font-size: 1.575rem;
+	color: var(--skin-color);
+	transition: all 0.3s ease;
+}
+.contact-section .contact-item-inner:hover i {
+	transform: translateY(-5px) scale(1.1);
+}
+.contact-section .contact-item-inner span {
+	display: block;
+	margin: 1rem 0 0.625rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text-dark-700);
+	text-transform: capitalize;
+}
+.contact-section .contact-item-inner p {
+	margin: 0;
+	font-size: 1rem;
+	color: var(--text-dark-600);
+	line-height: 1.625rem;
+	word-break: break-word;
+	transition: all 0.3s ease;
+	transition-delay: 0.2s;
+}
+.contact-section .contact-item-inner:hover p {
+	transform: scale(1.1);
+}
+.contact-section .contact-form {
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-top: 3.125rem;
+}
+.contact-section .w-50 {
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 1rem;
+}
+.contact-section .input-group {
+	margin: 0 0 1.575rem;
+	border-radius: 1.875rem;
+	transition: all 0.3s ease;
+}
+.contact-section .input-group::after {
+	border-radius: 1.875rem;
+}
+.contact-section .input-group .input-control {
+	display: block;
+	width: 100%;
+	height: 2.8125rem;
+	padding: 0 1rem;
+	font-size: 1rem;
+	border: none;
+	border-radius: 1.875rem;
+	background-color: transparent;
+	color: var(--text-dark-700);
+	caret-color: var(--text-dark-900);
+}
+.contact-section .input-group textarea.input-control {
+	/* 3 x height of input-control + 2 x gaps between inputs */
+	height: calc((3 * 2.8125rem) + (2 * 1.575rem));
+	padding-top: 1rem;
+	resize: none;
+}
+.contact-section .submit-btn {
+	flex: 0 0 100%;
+	max-width: 100%;
+	text-align: right;
+	padding: 0 1rem;
 }
