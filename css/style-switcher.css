@@ -1,0 +1,72 @@
+.style-switcher {
+	position: fixed;
+	right: 0;
+	top: 5rem;
+	width: 12.5rem;
+	padding: 1rem;
+	border-radius: 0.3125rem;
+	transition: all 0.3s ease;
+	transform: translateX(100%);
+	z-index: 101;
+}
+.style-switcher.open {
+	transform: translateX(-1rem);
+}
+.style-switcher .s-icon {
+	position: absolute;
+	right: 100%;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-right: 1rem;
+	text-align: center;
+	font-size: 1.25rem;
+	color: var(--text-dark-900);
+	border-radius: 50%;
+	transition: all 0.3s ease;
+}
+.style-switcher .s-icon i {
+	line-height: 2.5rem;
+}
+.style-switcher .s-icon::after {
+	border-radius: 50%;
+}
+.style-switcher .style-toggler {
+	top: 0;
+}
+.style-switcher .day-night {
+	top: 3.125rem;
+}
+.style-switcher h4 {
+	margin: 0 0 0.6325rem;
+	color: var(--text-dark-700);
+	font-style: 600;
+	font-size: 1rem;
+	text-transform: capitalize;
+}
+.style-switcher .colors {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.style-switcher .colors span {
+	display: inline-block;
+	width: 1.875rem;
+	height: 1.875rem;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.style-switcher .color-1 {
+	background-color: #2eb1ed;
+}
+.style-switcher .color-2 {
+	background-color: #fb839e;
+}
+.style-switcher .color-3 {
+	background-color: #ec9412;
+}
+.style-switcher .color-4 {
+	background-color: #1fc586;
+}
+.style-switcher .color-5 {
+	background-color: #cc3a3b;
+}

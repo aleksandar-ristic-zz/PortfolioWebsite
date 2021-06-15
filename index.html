@@ -9,7 +9,42 @@
 		<link rel="stylesheet" href="css/font-awesome-styles.css" />
 		<!-- main css -->
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/skins/color-1.css" />
+		<!-- style switcher - for demo purposes only -->
+		<link
+			rel="stylesheet"
+			class="alternate-style"
+			title="color-1"
+			href="css/skins/color-1.css"
+		/>
+		<link
+			rel="stylesheet"
+			class="alternate-style"
+			title="color-2"
+			href="css/skins/color-2.css"
+			disabled
+		/>
+		<link
+			rel="stylesheet"
+			class="alternate-style"
+			title="color-3"
+			href="css/skins/color-3.css"
+			disabled
+		/>
+		<link
+			rel="stylesheet"
+			class="alternate-style"
+			title="color-4"
+			href="css/skins/color-4.css"
+			disabled
+		/>
+		<link
+			rel="stylesheet"
+			class="alternate-style"
+			title="color-5"
+			href="css/skins/color-5.css"
+			disabled
+		/>
+		<link rel="stylesheet" href="css/style-switcher.css" />
 	</head>
 	<body>
 		<!--=== Header Start ===-->
@@ -116,7 +151,68 @@
 			</div>
 		</section>
 		<!-- home section end -->
-    <!--=== About Tabs Start ===-->
+
+		<!--=== About Section Start ===-->
+		<section class="about-section section" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="section-title">
+						<h2 data-heading="main info">About me</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="about-img">
+						<div class="img-box inner-shadow">
+							<img
+								src="img/home-img.png"
+								alt="cv picture"
+								class="outer-shadow"
+							/>
+						</div>
+						<!--=== Social Links Start ===-->
+						<div class="social-links">
+							<a href="#!" class="outer-shadow hover-in-shadow"
+								><i class="fab fa-facebook-f"></i>
+							</a>
+							<a href="#!" class="outer-shadow hover-in-shadow"
+								><i class="fab fa-twitter"></i>
+							</a>
+							<a href="#!" class="outer-shadow hover-in-shadow"
+								><i class="fab fa-instagram"></i>
+							</a>
+							<a href="#!" class="outer-shadow hover-in-shadow"
+								><i class="fab fa-linkedin"></i>
+							</a>
+						</div>
+						<!-- social links end -->
+					</div>
+					<div class="about-info">
+						<p>
+							<span>Hi! My name is Ri10@. I am a Web Developer.</span> Lorem
+							ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+							possimus repudiandae delectus aperiam quas dolores voluptas hic
+							esse consequatur consequuntur doloremque iure, repellendus rerum,
+							incidunt nihil harum sunt vero at!
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+							doloremque sequi repellendus incidunt aperiam, deleniti labore
+							quae consequatur sint aliquid.
+						</p>
+						<a
+							href="cv.pdf"
+							class="btn-cta outer-shadow hover-in-shadow"
+							download
+							>Download CV</a
+						>
+						<a
+							href="#contact"
+							class="link-item btn-cta outer-shadow hover-in-shadow"
+							>Hire Me</a
+						>
+					</div>
+				</div>
+				<!--=== About Tabs Start ===-->
 				<div class="row">
 					<div class="about-tabs">
 						<span class="tab-item outer-shadow active" data-target=".skills"
@@ -319,7 +415,7 @@
 		</section>
 		<!-- about section end -->
 
-    <!--=== Service Section Start ===-->
+		<!--=== Service Section Start ===-->
 		<section class="service-section section" id="services">
 			<div class="container">
 				<div class="row">
@@ -422,7 +518,7 @@
 		</section>
 		<!-- service section end -->
 
-    <!--=== Portfolio Section Start ===-->
+		<!--=== Portfolio Section Start ===-->
 		<section class="portfolio-section section" id="portfolio">
 			<div class="container">
 				<div class="row">
@@ -784,7 +880,7 @@
 		</section>
 		<!-- portfolio section end -->
 
-    <!--=== Testimonial Section Start ===-->
+		<!--=== Testimonial Section Start ===-->
 		<section class="testimonial-section section" id="testimonial">
 			<div class="container">
 				<div class="row">
@@ -866,7 +962,7 @@
 		</section>
 		<!-- testimonial section end -->
 
-    <!--=== Contact Section Start ===-->
+		<!--=== Contact Section Start ===-->
 		<section class="contact-section section" id="contact">
 			<div class="container">
 				<div class="row">
@@ -956,7 +1052,7 @@
 		</section>
 		<!-- contact section end -->
 
-    <!--=== Portfolio popup start ===-->
+		<!--=== Portfolio popup start ===-->
 		<div class="pp portfolio-popup">
 			<div class="pp-details">
 				<div class="pp-details-inner">
@@ -992,5 +1088,28 @@
 			</div>
 		</div>
 		<!-- portfolio popup end -->
+
+		<!--=== Style Swicther Start - for demo purposes only ===-->
+		<div class="style-switcher outer-shadow">
+			<div class="style-toggler s-icon outer-shadow hover-in-shadow">
+				<i class="fas fa-cog fa-spin"></i>
+			</div>
+			<div class="day-night s-icon outer-shadow hover-in-shadow">
+				<i class="fas fa-moon"></i>
+			</div>
+
+			<h4>Theme Colors</h4>
+			<div class="colors">
+				<span class="color-1" onclick="setActiveStyle('color-1')"></span>
+				<span class="color-2" onclick="setActiveStyle('color-2')"></span>
+				<span class="color-3" onclick="setActiveStyle('color-3')"></span>
+				<span class="color-4" onclick="setActiveStyle('color-4')"></span>
+				<span class="color-5" onclick="setActiveStyle('color-5')"></span>
+			</div>
+		</div>
+
+		<!--=== Main JS ===-->
+		<script src="js/main.js"></script>
+		<script src="js/style-switcher.js"></script>
 	</body>
 </html>
