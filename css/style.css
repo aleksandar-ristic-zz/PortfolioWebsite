@@ -2,6 +2,7 @@
 * 1.  Global Styles
 * 2. Header
 * 3. Navigation
+* 4. Home Section
 * *** *** *** *** *** *** */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400;1,500;1,600&display=swap');
@@ -71,6 +72,32 @@ img {
 .justify-content-between {
 	justify-content: space-between;
 }
+.outer-shadow {
+	box-shadow: var(--outer-shadow);
+}
+.inner-shadow {
+	box-shadow: var(--inner-shadow);
+}
+.hover-in-shadow {
+	position: relative;
+	z-index: 1;
+}
+.hover-in-shadow:hover {
+	box-shadow: var(--outer-shadow-0);
+}
+.hover-in-shadow::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease;
+	z-index: -1;
+}
+.hover-in-shadow:hover::after {
+	box-shadow: var(--inner-shadow);
+}
 .align-items-center {
 	align-items: center;
 }
@@ -89,6 +116,31 @@ img {
 }
 .btn-cta::after {
 	border-radius: 1.875rem;
+}
+.section-title {
+	max-width: 100%;
+	margin-bottom: 3.75rem;
+	padding: 0 1rem;
+	text-align: center;
+	flex: 0 0 100%;
+}
+.section-title h2 {
+	display: inline-block;
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: var(--text-dark-900);
+	text-transform: uppercase;
+	margin: 0;
+}
+.section-title h2::before {
+	content: attr(data-heading);
+	display: block;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--skin-color);
+}
+.section.hide {
+	display: none;
 }
 
 /* *** *** *** *** = = = = = = *** *** *** *** */
@@ -250,4 +302,54 @@ img {
 	font-size: 1rem;
 	color: var(--text-dark-600);
 	transform: translateY(50%) rotate(90deg);
+}
+
+/* *** *** *** *** = = = = = = *** *** *** *** */
+/* *** *** *** 5. Home Section *** *** *** */
+.home-section {
+	position: relative;
+}
+
+.home-section .full-screen {
+	padding: 3.125rem 0;
+	min-height: 100vh;
+}
+.home-section .home-text,
+.home-section .home-img {
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 1rem;
+}
+.home-section .home-text p {
+	color: var(--text-dark-300);
+	font-size: 1.125rem;
+	text-transform: capitalize;
+	margin: 0;
+}
+.home-section .home-text h2 {
+	font-size: 3.4375rem;
+	font-weight: 700;
+	color: var(--text-dark-900);
+	margin: 0;
+}
+.home-section .home-text h1 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--text-dark-600);
+	text-transform: capitalize;
+}
+.home-section .home-text .btn-cta {
+	margin-top: 1.875rem;
+}
+.home-section .home-img .img-box {
+	display: block;
+	max-width: 28.125rem;
+	margin: auto;
+	padding: 1rem;
+	border-radius: 50%;
+}
+.home-section .home-img .img-box img {
+	width: 100%;
+	border: 10px solid transparent;
+	border-radius: 50%;
 }
