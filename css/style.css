@@ -4,6 +4,9 @@
 * 3.  Header
 * 4.  Navigation
 * 5.  Home Section
+* 6.  About Section
+* 7.  Service Section
+* 8.  Portfolio Section
 * *** *** *** *** *** *** */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400;1,500;1,600&display=swap');
@@ -692,4 +695,92 @@ img {
 	font-size: 1rem;
 	color: var(--text-dark-600);
 	line-height: 1.625rem;
+}
+/* *** *** *** *** = = = = = = *** *** *** *** */
+/* *** *** *** 8. Portfolio Section *** *** *** */
+.portfolio-section {
+	min-height: 100vh;
+	padding: 5rem 0 5rem;
+}
+.portfolio-section .section-title {
+	margin-bottom: 2.5rem;
+}
+.portfolio-section .portfolio-filter {
+	max-width: 100%;
+	margin-bottom: 1.25rem;
+	padding: 0 1rem;
+	flex: 0 0 100%;
+	text-align: center;
+}
+.portfolio-section .filter-item {
+	display: inline-block;
+	margin: 0 0.3125rem 0.625rem;
+	padding: 0.3125rem 0.625rem;
+	cursor: pointer;
+	font-weight: 500;
+	color: var(--text-dark-600);
+	text-transform: capitalize;
+	border-radius: 1.875rem;
+}
+.portfolio-section .filter-item:hover:not(.active) {
+	opacity: 0.6;
+}
+.portfolio-section .filter-item.active {
+	color: var(--skin-color);
+}
+.portfolio-section .portfolio-item {
+	flex: 0 0 33.33%;
+	max-width: 33.33%;
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.portfolio-section .portfolio-item.hide {
+	display: none;
+}
+.portfolio-section .portfolio-item.show {
+	display: block;
+	animation: fadeInTop 0.5s ease;
+}
+.portfolio-section .portfolio-item-inner {
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 0.3125rem;
+}
+.portfolio-section .portfolio-item-img img {
+	width: 100%;
+	border-radius: 0.3125rem 0.3125rem 0 0;
+	transition: all 0.3s ease;
+}
+.portfolio-section .portfolio-item-inner:hover .portfolio-item-img img {
+	transform: translateY(-25px);
+}
+.portfolio-section .portfolio-item-img {
+	position: relative;
+}
+.portfolio-section .portfolio-item-img .view-project {
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	text-transform: capitalize;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--skin-color);
+	opacity: 0;
+	transform: translateY(-5px);
+	transition: all 0.3s ease;
+	z-index: -1;
+}
+.portfolio-section .portfolio-item-inner:hover .view-project {
+	opacity: 1;
+	transform: translateY(0);
+}
+.portfolio-section .portfolio-item-details {
+	display: none;
+}
+.portfolio-section .portfolio-item-inner p {
+	margin: 0.625rem;
+	font-size: 1rem;
+	color: var(--text-dark-600);
+	text-transform: capitalize;
 }
