@@ -1007,3 +1007,98 @@ img {
 .portfolio-popup .pp-next {
 	right: 1rem;
 }
+
+/* *** *** *** *** = = = = = = *** *** *** *** */
+/* *** *** *** 10. Testimonial Section *** *** *** */
+.testimonial-section {
+	padding: 5rem 0 5rem;
+	min-height: 100vh;
+}
+.testimonial-section .testim-box {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	padding: 0 1rem;
+}
+.testimonial-section .testim-slider {
+	border-radius: 0.3125rem;
+	text-align: center;
+	overflow: hidden;
+}
+.testimonial-section .testim-slider-container {
+	display: flex;
+	align-items: center;
+	transition: margin 1s ease;
+}
+.testimonial-section .testim-item {
+	padding: 1.875rem;
+	text-align: center;
+	position: relative;
+}
+.testimonial-section .testim-item i {
+	position: absolute;
+	font-size: 1.875rem;
+	color: var(--text-dark-600);
+	opacity: 0.1;
+}
+.testimonial-section .testim-item i.left {
+	top: 0.3125rem;
+	left: 0.3125rem;
+}
+.testimonial-section .testim-item i.right {
+	bottom: 0.3125rem;
+	right: 0.3125rem;
+}
+.testimonial-section .testim-item p {
+	font-size: 1rem;
+	line-height: 1.6125rem;
+	color: var(--text-dark-600);
+	margin: 0 0 1.875rem;
+}
+.testimonial-section .testim-item .img-box {
+	position: relative;
+	display: inline-block;
+}
+.testimonial-section .testim-item .img-box img {
+	max-width: 5rem;
+	width: 100%;
+}
+.testimonial-section .testim-item .img-box span {
+	display: block;
+	font-weight: 600;
+	font-size: 1rem;
+	color: var(--text-dark-700);
+}
+.testimonial-section .testim-item .img-box .img-bg {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 70%;
+	border-radius: 50%;
+	background-color: var(--skin-color);
+	z-index: -1;
+}
+.testimonial-section .testim-slider-nav {
+	margin-top: 1.875rem;
+	text-align: center;
+}
+.testimonial-section .testim-slider-nav span {
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 0 0.25rem;
+	color: var(--skin-color);
+	text-transform: capitalize;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+}
+.testimonial-section .testim-slider-nav span::after {
+	border-radius: 50%;
+}
+.testimonial-section .testim-slider-nav span i {
+	line-height: 2.5rem;
+	font-size: 1.25rem;
+}

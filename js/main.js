@@ -184,3 +184,53 @@
 		}
 	}
 })()
+
+/* *** Testimonial Slider *** */
+;(() => {
+	const sliderContainer = document.querySelector('.testim-slider-container')
+	const slides = sliderContainer.querySelectorAll('.testim-item')
+	const slideWidth = sliderContainer.offsetWidth
+	const prevBtn = document.querySelector('.testim-slider-nav .prev')
+	const nextBtn = document.querySelector('.testim-slider-nav .next')
+	const activeSlide = sliderContainer.querySelector('.testim-item.active')
+	let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(
+		activeSlide
+	)
+
+	// width of all slides
+	slides.forEach(slide => {
+		slide.style.width = slideWidth + 'px'
+	})
+	// set width of sliderContainer
+	sliderContainer.style.width = slideWidth * slides.length + 'px'
+
+	nextBtn.addEventListener('click', () => {
+		if (slideIndex === slides.length - 1) {
+			slideIndex = 0
+		} else {
+			slideIndex++
+		}
+		slider()
+	})
+
+	prevBtn.addEventListener('click', () => {
+		if (slideIndex === 0) {
+			slideIndex = slides.length - 1
+		} else {
+			slideIndex--
+		}
+		slider()
+	})
+
+	function slider() {
+		// remove existing active slide
+		sliderContainer
+			.querySelector('.testim-item.active')
+			.classList.remove('active')
+
+		// activate new slide
+		slides[slideIndex].classList.add('active')
+		sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + 'px'
+	}
+	slider()
+})()
