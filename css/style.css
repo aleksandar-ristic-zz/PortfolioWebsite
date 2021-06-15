@@ -784,3 +784,226 @@ img {
 	color: var(--text-dark-600);
 	text-transform: capitalize;
 }
+
+/* *** *** *** *** = = = = = = *** *** *** *** */
+/* *** *** *** 9. Portfolio Popup *** *** *** */
+.portfolio-popup {
+	background-color: var(--bg-dark-50);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	overflow-y: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+.portfolio-popup.open {
+	visibility: visible;
+	opacity: 1;
+}
+.portfolio-popup .pp-loader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1005;
+	background-color: var(--bg-opacity);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	opacity: 0;
+}
+.portfolio-popup .pp-loader.active {
+	visibility: visible;
+	opacity: 1;
+}
+.portfolio-popup .pp-loader div {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 3px solid var(--skin-color);
+	border-radius: 50%;
+	border-right: 3px solid transparent;
+	animation: spin 2s linear infinite;
+}
+.portfolio-popup .pp-details {
+	max-width: 1350px;
+	width: calc(85% + 1.875rem);
+	margin: auto;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.portfolio-popup .pp-details.active {
+	opacity: 1;
+}
+.portfolio-popup .pp-details-inner {
+	padding: 1.875rem 0;
+}
+.portfolio-popup .pp-title {
+	padding: 0 1rem;
+}
+.portfolio-popup .pp-title h2 {
+	margin: 0 0 0.3125rem;
+	font-size: 1.75rem;
+	font-weight: 600;
+	color: var(--text-dark-900);
+	text-transform: capitalize;
+}
+.portfolio-popup .pp-title p {
+	margin: 0 0 1rem;
+	padding-bottom: 0.6125rem;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--text-dark-600);
+	border-bottom: 1px solid var(--bg-dark-100);
+}
+.portfolio-popup .pp-title p span {
+	font-weight: 400;
+	font-style: italic;
+}
+.portfolio-popup .pp-project-details h3 {
+	margin: 0 0 1rem;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--text-dark-700);
+	text-transform: capitalize;
+}
+.portfolio-popup .description {
+	flex: 0 0 65%;
+	max-width: 65%;
+	padding: 0 1rem;
+}
+.portfolio-popup .description p {
+	font-size: 1rem;
+	color: var(--text-dark-600);
+	line-height: 1.6125rem;
+}
+.portfolio-popup .info {
+	flex: 0 0 35%;
+	max-width: 35%;
+	padding: 0 1rem;
+}
+.portfolio-popup .info ul li {
+	display: block;
+	margin-bottom: 0.6125rem;
+	font-weight: 600;
+	color: var(--text-dark-600);
+	font-size: 1rem;
+}
+.portfolio-popup .info ul li span {
+	font-weight: 400;
+}
+.portfolio-popup .info ul li a {
+	color: var(--skin-color);
+}
+.portfolio-popup .info ul li:last-child {
+	margin-bottom: 0;
+}
+.portfolio-popup .separator {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: var(--bg-dark-100);
+}
+.portfolio-popup .pp-img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	padding: 0.625rem;
+	border-radius: 0.3125rem;
+}
+.portfolio-popup .pp-main {
+	max-width: 1350px;
+	min-height: 100vh;
+	width: 85%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.portfolio-popup .pp-main-inner {
+	position: relative;
+	padding: 4.375rem 0 3.125rem;
+}
+.portfolio-popup .pp-project-details-btn {
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	height: 2.5rem;
+	padding: 0 1rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--skin-color);
+	cursor: pointer;
+	line-height: 2.5rem;
+	border-radius: 1.875rem;
+	transition: all 0.3s ease;
+}
+.portfolio-popup .pp-project-details-btn::after {
+	border-radius: 1rem;
+}
+.portfolio-popup .pp-project-details-btn i {
+	margin-left: 0.25rem;
+}
+.portfolio-popup .pp-close {
+	position: absolute;
+	top: 1rem;
+	right: 0;
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 2.1875rem;
+	line-height: 2.1875rem;
+	color: var(--text-dark-600);
+	text-align: center;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+}
+.portfolio-popup .pp-close::after {
+	border-radius: 50%;
+}
+.portfolio-popup .pp-counter {
+	position: absolute;
+	right: 0;
+	bottom: 0.3125rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	font-size: 1rem;
+	color: var(--text-dark-600);
+}
+.portfolio-popup .pp-prev,
+.portfolio-popup .pp-next {
+	position: fixed;
+	top: 50%;
+	width: 2.5rem;
+	height: 2.5rem;
+	text-align: center;
+	font-size: 1.25rem;
+	color: var(--text-dark-900);
+	cursor: pointer;
+	opacity: 0.5;
+	z-index: 1010;
+	transition: all 0.3s ease;
+}
+.portfolio-popup .pp-prev:hover,
+.portfolio-popup .pp-next:hover {
+	opacity: 1;
+}
+.portfolio-popup .pp-prev i,
+.portfolio-popup .pp-next i {
+	line-height: 2.5rem;
+}
+.portfolio-popup .pp-prev i {
+	transform: rotate(180deg);
+}
+.portfolio-popup .pp-prev {
+	left: 1rem;
+}
+.portfolio-popup .pp-next {
+	right: 1rem;
+}
