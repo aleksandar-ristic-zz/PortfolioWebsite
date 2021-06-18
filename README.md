@@ -16,12 +16,17 @@ dark. All easily accessible at every moment in top right corner of page.
 
 ## Overview
 
+[Site Demo](https://cvwebapp.netlify.app/#home)
+
 ### The challenge
 
 Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+- Filter portfolio items
+- Show portfolio item images, details on click
+- Shange accent colors
+- Toggle between light and dark color modes
 
 ### Built with
 
