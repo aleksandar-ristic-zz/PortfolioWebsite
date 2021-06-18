@@ -1,6 +1,7 @@
 /* *** Table of Contents ***
 * 1.  Global Styles
 * 2.	Animations
+* 3.0 Preloader
 * 3.  Header
 * 4.  Navigation
 * 5.  Home Section
@@ -120,6 +121,31 @@ img {
 }
 .align-items-center {
 	align-items: center;
+}
+.section-title {
+	max-width: 100%;
+	margin-bottom: 3.75rem;
+	padding: 0 1rem;
+	text-align: center;
+	flex: 0 0 100%;
+}
+.section-title h2 {
+	display: inline-block;
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: var(--text-dark-900);
+	text-transform: uppercase;
+	margin: 0;
+}
+.section-title h2::before {
+	content: attr(data-heading);
+	display: block;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--skin-color);
+}
+.section.hide {
+	display: none;
 }
 .btn-cta {
 	display: inline-block;
@@ -242,30 +268,52 @@ img {
 		transform: translateY(0);
 	}
 }
-.section-title {
-	max-width: 100%;
-	margin-bottom: 3.75rem;
-	padding: 0 1rem;
-	text-align: center;
-	flex: 0 0 100%;
+@keyframes loader {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-1.875rem);
+	}
 }
-.section-title h2 {
-	display: inline-block;
-	font-size: 1.875rem;
-	font-weight: 700;
-	color: var(--text-dark-900);
-	text-transform: uppercase;
-	margin: 0;
+
+/* *** *** *** *** = = = = = = *** *** *** *** */
+/* *** *** *** 3.0 Preloader *** *** *** */
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--bg-dark-50);
+	z-index: 1100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.section-title h2::before {
-	content: attr(data-heading);
-	display: block;
-	font-size: 1rem;
-	font-weight: 600;
-	color: var(--skin-color);
+.preloader.fade-out {
+	opacity: 0;
+	transition: all 0.6s ease;
 }
-.section.hide {
-	display: none;
+.preloader .box {
+	width: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.preloader .box div {
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	background-color: var(--skin-color);
+	animation: loader 1s ease infinite;
+}
+.preloader .box div:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.preloader .box div:nth-child(3) {
+	animation-delay: 0.2s;
 }
 
 /* *** *** *** *** = = = = = = *** *** *** *** */
